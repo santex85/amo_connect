@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-CSRF_TRUSTED_ORIGINS = ['https://*.amo-connect.ru']
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUST").split(" ")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0))
