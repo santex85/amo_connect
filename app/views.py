@@ -26,5 +26,5 @@ class GetInfoView(APIView):
         #     headers=headers)
         # print(req.text)
         with open('test.txt', 'w') as file:
-            file.write(request.data)
+            file.write(str(request.data))
         return Response(status=status.HTTP_200_OK)
